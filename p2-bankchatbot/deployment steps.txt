@@ -1,0 +1,30 @@
+
+
+docker build -t proddut/banking-app-chatbot:latest .
+docker login
+docker tag proddut/banking-app-chatbot:latest proddut/banking-app-chatbot:latest
+docker push proddut/banking-app-chatbot:latest
+
+latest: digest: sha256:9a22648e8bdc34d8aae551fba7a8911c42e80f6d4c1b2e880e5fee7b387f162a size: 856
+docker run -p 8080:8080 proddut/banking-app-chatbot:latest
+
+gcloud auth login
+gcloud config set project bankproject-442001
+docker tag proddut/banking-app-chatbot:latest gcr.io/bankproject-442001/banking-app-chatbot:latest
+docker push gcr.io/bankproject-442001/banking-app-chatbot:latest
+gcloud run deploy banking-chatbot --image=gcr.io/bankproject-442001/banking-app-chatbot:latest --platform=managed --region=us-central1 --allow-unauthenticated
+
+Service URL: https://banking-app-service-1-389718663490.us-central1.run.app
+
+
+/// docker clean
+docker builder prune --all --force
+docker system prune --all --force
+
+
+
+
+
+
+
+
