@@ -5,3 +5,4 @@ PyJWT==2.8.0
 regex
 transformers==4.34.0
 numpy<2.0
+gunicorn

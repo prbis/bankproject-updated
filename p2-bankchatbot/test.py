@@ -4,7 +4,11 @@ import sys
 
 # Base URL of the Flask server
 #BASE_URL = "http://localhost:5000"
-BASE_URL = "http://127.0.0.1:8080"
+#BASE_URL = "http://127.0.0.1:8080"
+#BASE_URL = "http://localhost:8080"
+
+BASE_URL = "https://banking-chatbot-02-389718663490.us-central1.run.app:443"
+#BASE_URL = "https://chatbot01-389718663490.us-central1.run.app"
 
 
 

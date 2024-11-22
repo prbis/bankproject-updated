@@ -444,7 +444,7 @@ def generate_response(user_id, user_message):
     return response
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))
+    port = int(os.environ.get('PORT', 8080))  # Default to 8080 if PORT is not set
     app.run(host='0.0.0.0', port=port)
 
 #if __name__ == '__main__':
